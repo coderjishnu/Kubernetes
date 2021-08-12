@@ -1,0 +1,36 @@
+< Kubernetes Commands >
+
+ 
+
+    1) Get the pod        : kubectl get pods
+       describe the pod   : kubectl describe pods
+
+ 
+
+    2) Create deployment  : kubectl create deployment hello-node --image=k8s.gcr.io/echoserver:1.4
+       get deployment     : kubectl get deployments
+       describe deployment: kubectl describe deployments 
+
+ 
+
+    3) Create service     : kubectl expose deployment hello-node --type=LoadBalancer --port=8080
+       get services       : kubectl get services
+       describe service   : kubectl describe services
+
+ 
+
+    4) Scale the app      : kubectl scale deployments/kubernetes-bootcamp --replicas=4
+
+ 
+
+    5) delete service     : kubectl delete service hello-node
+    
+    6) curl command       : curl $(minikube ip):$NODE_PORT
+
+ 
+
+    7) get replica set    : kubectl get rs
+
+ 
+
+    8) Get log            : kubectl logs $POD_NAME
